@@ -1,0 +1,65 @@
+{
+    "geode": "3.0.0",
+    "gd": {
+        "win": "2.2074"
+    },
+    "id": "ollie.altspam-assist",
+    "name": "AltSpam Assist",
+    "version": "1.0.0",
+    "developer": "olliE bench",
+    "description": "Converts random spamming into perfect alternate spam. Configurable strength, timing window, and visual feedback.",
+    "links": {},
+    "settings": {
+        "enabled": {
+            "type": "bool",
+            "default": true,
+            "name": "Enabled",
+            "description": "Toggle AltSpam Assist on/off"
+        },
+        "strength": {
+            "type": "float",
+            "default": 0.85,
+            "min": 0.0,
+            "max": 1.0,
+            "name": "Strength",
+            "description": "How aggressively to correct input toward perfect alternate spam (0 = passthrough, 1 = full correction)"
+        },
+        "window-ms": {
+            "type": "int",
+            "default": 80,
+            "min": 20,
+            "max": 200,
+            "name": "Timing Window (ms)",
+            "description": "Time window for detecting an input pair as an alternate. Wider = more forgiving."
+        },
+        "min-spam-hz": {
+            "type": "float",
+            "default": 8.0,
+            "min": 2.0,
+            "max": 30.0,
+            "name": "Min Spam Rate (Hz)",
+            "description": "Minimum clicks/second before assist activates"
+        },
+        "show-indicator": {
+            "type": "bool",
+            "default": true,
+            "name": "Show Indicator",
+            "description": "Show rhythm indicator overlay during gameplay"
+        },
+        "indicator-opacity": {
+            "type": "float",
+            "default": 0.75,
+            "min": 0.1,
+            "max": 1.0,
+            "name": "Indicator Opacity",
+            "description": "Opacity of the rhythm indicator"
+        },
+        "correct-sound": {
+            "type": "bool",
+            "default": false,
+            "name": "Correction Sound",
+            "description": "Play a subtle click when input is corrected"
+        }
+    },
+    "tags": ["gameplay", "input", "assist"]
+}
